@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Midex Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background-color: #0d0d1a;
+      color: #f5f5f5;
+    }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 15, 35, 0.95);
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00fff5;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(13, 13, 26, 0.8), rgba(13, 13, 26, 0.8)), 
+                  url('https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1.2s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section base */
+    section {
+      padding: 4rem 10%;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #00fff5;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #ddd;
+    }
+
+    /* Split layout */
+    .split {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .split img {
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Mission card */
+    .highlight {
+      background: #1a1a2e;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      margin: 2rem 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      animation: fadeInUp 1s ease;
+    }
+
+    .highlight p {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    /* Approach */
+    .approach {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .step {
+      background: #111122;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-5px);
+    }
+
+    .step h3 {
+      color: #ffd700;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Quick stats */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .stat {
+      background: #111122;
+      padding: 2rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .stat:hover {
+      transform: scale(1.05);
+    }
+
+    .stat h3 {
+      font-size: 2rem;
+      color: #00fff5;
+    }
+
+    /* Vision & Values */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .value-box {
+      background: #111122;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .value-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .value-box img {
+      width: 60px;
+      margin-bottom: 1rem;
+      animation: float 3s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Team */
+    .team-flex {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .team-img img {
+      width: 300px;
+      border-radius: 50%;
+      border: 4px solid #00fff5;
+    }
+
+    .team-text h3 {
+      color: #ffd700;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Awards */
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .award-box {
+      background: #111122;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .award-box img {
+      width: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .award-box:hover {
+      transform: scale(1.05);
+    }
+
+    /* Video */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #0d0d1a, #1a1a3d);
+    }
+
+    .cta h2 {
+      color: #ffd700;
+      margin-bottom: 1rem;
+    }
+
+    .cta button {
+      padding: 0.8rem 2rem;
+      border: none;
+      background: #00fff5;
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta button:hover {
+      background: #ffd700;
+    }
+
+    /* Footer */
+    footer {
+      background: #0b0b17;
+      padding: 2rem 10%;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"><a href="index.html">Midex Studio</a></div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>About Midex Studio</h1>
+    <p>Where Creativity Meets Technology</p>
+  </div>
+
+  <!-- Our Story -->
+  <section>
+    <div class="split">
+      <img src="img7.jpeg.jpeg" alt="Studio Team">
+      <div>
+        <h2>Our Story</h2>
+        <p>Midex Studio was founded with a vision: to merge cutting-edge 3D technology with stunning visual storytelling. Over the years, we’ve worked with brands, agencies, and entrepreneurs worldwide, creating visuals that don’t just look good — they sell.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section>
+    <div class="highlight">
+      <p>“Our mission is to transform concepts into visual masterpieces that engage, inspire, and convert audiences.”</p>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section>
+    <h2>Our Approach</h2>
+    <div class="approach">
+      <div class="step">
+        <h3>Listen & Understand</h3>
+        <p>We study your brand and project goals carefully to deliver personalized solutions.</p>
+      </div>
+      <div class="step">
+        <h3>Design & Create</h3>
+        <p>Using the latest 3D tools, we craft hyper-realistic visuals with stunning detail.</p>
+      </div>
+      <div class="step">
+        <h3>Deliver & Impress</h3>
+        <p>On time, on budget, and beyond expectations — that’s our commitment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section>
+    <h2>Quick Stats</h2>
+    <div class="stats">
+      <div class="stat">
+        <h3>5+</h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat">
+        <h3>100+</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat">
+        <h3>15+</h3>
+        <p>Clients Worldwide</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Values -->
+  <section>
+    <h2>Our Vision & Values</h2>
+    <div class="values-grid">
+      <div class="value-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Innovation">
+        <h3>Innovation</h3>
+        <p>Pioneering new ideas and pushing the limits of design and animation.</p>
+      </div>
+      <div class="value-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/1484/1484812.png" alt="Quality">
+        <h3>Quality</h3>
+        <p>Delivering only top-tier visuals that meet international standards.</p>
+      </div>
+      <div class="value-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135823.png" alt="Trust">
+        <h3>Trust</h3>
+        <p>Building long-lasting relationships with clients based on transparency and results.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team / Founder -->
+  <section>
+    <h2>Meet the Founder</h2>
+    <div class="team-flex">
+      <div class="team-img">
+        <img src="img6.jpeg.jpg" alt="Michael - Founder" width="200" height="390">
+      </div>
+      <div class="team-text">
+        <h3>Samuel – Creative Director</h3>
+        <p>With over 5 years of experience in 3D animation, CGI, and visual effects, I specialize in bringing products, brands, and ideas to life through immersive visuals. My mission is to blend art and technology to create animations that inspire and engage audiences worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section>
+    <h2>Awards & Recognition</h2>
+    <div class="awards-grid">
+      <div class="award-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Award">
+        <h3>Top Rated Freelancer</h3>
+        <p>Recognized for delivering exceptional projects with 5-star feedback.</p>
+      </div>
+      <div class="award-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Certificate">
+        <h3>Certified Designer</h3>
+        <p>Certified in professional CGI and 3D animation techniques.</p>
+      </div>
+      <div class="award-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/744/744502.png" alt="Global">
+        <h3>Global Reach</h3>
+        <p>Worked with international clients across multiple industries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Demo -->
+  <section>
+    <h2>Watch Our Demo Reel</h2>
+    <p style="text-align:center;">Experience the creativity and quality of our animations in action.</p>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Demo Reel" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>Your Partner for Stunning 3D Visuals</h2>
+    <p>Let’s bring your vision to life with cinematic storytelling and cutting-edge 3D.</p>
+    <button>Contact Us</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Midex Studio. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

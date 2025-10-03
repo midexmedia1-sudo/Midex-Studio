@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Midex Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a1a;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Sticky Nav */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #0a0a1a, #1a1a40);
+      padding: 1rem 2rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00fff5;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(10,10,26,0.8), rgba(26,26,64,0.8)), url('services-bg.jpg') center/cover no-repeat;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #00fff5;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+    }
+
+    .service-card {
+      background: linear-gradient(145deg, #111133, #1a1a40);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px rgba(0, 255, 245, 0.4);
+    }
+
+    .service-card h3 {
+      color: #00fff5;
+      margin-bottom: 0.5rem;
+    }
+
+/* Industries Section */
+#industries {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+#industries h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+#industries .section-intro {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.industry-card {
+  background: #3bb472;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+}
+
+/* Process Section */
+#process {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+#process h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+#process .section-intro {
+  margin-bottom: 50px;
+  color: #ddd;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  text-align: left;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.step-number {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: #00c6ff;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+    
+    /* CTA */
+    .services-cta {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(90deg, #111133, #0a0a1a);
+    }
+
+    .services-cta h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .services-cta button {
+      padding: 0.8rem 2rem;
+      border: none;
+      background: #00fff5;   /* neon cyan */
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .services-cta button:hover {
+      background: #ffd700;   /* gold hover */
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .services-cta h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo"><a href="index.html">Midex Studio</a></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Our Services</h1>
+    <p>At Midex Studio, we specialize in creating photorealistic 3D visuals and cinematic animations that help brands stand out. Explore our services below.</p>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="services-grid">
+    <div class="service-card">
+      <h3>3D Product Animation</h3>
+      <p>Showcase your product in motion with cinematic storytelling.</p>
+    </div>
+    <div class="service-card">
+      <h3>Jewelry Visualization</h3>
+      <p>Highlight every sparkle, texture, and reflection in luxury detail.</p>
+    </div>
+    <div class="service-card">
+      <h3>VFX & Compositing</h3>
+      <p>Realistic fire, water, smoke, and cinematic effects.</p>
+    </div>
+    <div class="service-card">
+      <h3>Packaging & Brand CGI</h3>
+      <p>Bring your packaging designs to life before they hit the shelves.</p>
+    </div>
+    <div class="service-card">
+      <h3>3D Modeling & Rendering</h3>
+      <p>High-quality models ready for games, ads, or virtual stores.</p>
+    </div>
+    <div class="service-card">
+      <h3>Custom Animation Requests</h3>
+      <p>Tailored solutions to fit your unique vision.</p>
+    </div>
+     <div class="service-card">
+      <h3>AI Animation</h3>
+      <p>Next-gen AI-powered animations for innovative storytelling.</p>
+    </div>
+     <div class="service-card">
+      <h3>VFX Animation</h3>
+      <p>Cinematic VFX sequences with dynamic motion and realism.</p>
+    </div>
+  </section>
+
+  <!-- Industries We Serve Section -->
+<section id="industries">
+  <h2>Industries We Serve</h2>
+  <p class="section-intro">Our expertise in 3D, AI, and VFX helps brands across diverse industries stand out with stunning visuals.</p>
+
+  <div class="industries-grid">
+    <div class="industry-card">💎 Jewelry & Luxury</div>
+    <div class="industry-card">🛍️ Fashion & Retail</div>
+    <div class="industry-card">📱 Tech & Electronics</div>
+    <div class="industry-card">🎮 Gaming & Entertainment</div>
+    <div class="industry-card">🏢 Architecture & Interiors</div>
+    <div class="industry-card">📺 Advertising & Media</div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section id="process">
+  <h2>Our Process</h2>
+  <p class="section-intro">We make every project seamless, transparent, and tailored to your vision.</p>
+
+  <div class="process-steps">
+    <div class="step">
+      <span class="step-number">1</span>
+      <h3>Concept & Brief</h3>
+      <p>You share your idea and requirements — we listen and plan.</p>
+    </div>
+    <div class="step">
+      <span class="step-number">2</span>
+      <h3>Design & Animation</h3>
+      <p>We create visuals, animations, and effects tailored to your brand.</p>
+    </div>
+    <div class="step">
+      <span class="step-number">3</span>
+      <h3>Review & Revisions</h3>
+      <p>Collaborative feedback ensures we refine until it’s perfect.</p>
+    </div>
+    <div class="step">
+      <span class="step-number">4</span>
+      <h3>Final Delivery</h3>
+      <p>Receive polished, high-quality outputs ready to impress.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CTA Section -->
+  <section class="services-cta">
+    <h2>Let’s build something stunning together.</h2>
+    <button onclick="window.location.href='contact.html'">Get a Quote</button>
+  </section>
+
+</body>
+</html>
