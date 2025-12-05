@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Midex Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #0d0d1a;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: rgba(15, 15, 35, 0.95);
+      padding: 1rem 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00fff5;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(13, 13, 26, 0.8), rgba(13, 13, 26, 0.8)),
+        url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1350&q=80")
+        center/cover no-repeat;
+      text-align: center;
+      padding: 6rem 2rem;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    section {
+      padding: 4rem 10%;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00fff5;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .contact-info {
+      background: #111122;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .contact-info p {
+      margin: 0.5rem 0;
+    }
+
+    form {
+      background: #111122;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+
+    form button {
+      padding: 0.8rem 2rem;
+      border: none;
+      background: #00fff5;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #ffd700;
+    }
+
+    .working-hours,
+    .faq,
+    .map,
+    .cta {
+      margin-top: 3rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      background: #1a1a2e;
+      padding: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .faq-item h3 {
+      margin: 0;
+    }
+
+    .faq-item p {
+      display: none;
+      margin-top: 0.5rem;
+    }
+
+    .faq-item.active p {
+      display: block;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 3rem;
+      background: linear-gradient(135deg, #0d0d1a, #1a1a3d);
+      border-radius: 10px;
+    }
+
+    .cta h2 {
+      margin-bottom: 1rem;
+      color: #ffd700;
+    }
+
+    .cta button {
+      padding: 0.8rem 2rem;
+      border: none;
+      background: #00fff5;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .cta button:hover {
+      background: #ffd700;
+    }
+
+    footer {
+      background: #0b0b17;
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      z-index: 999;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"><a href="index.html">Midex Studio</a></div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero" data-aos="fade-up">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you</p>
+  </div>
+
+  <!-- Contact Section -->
+  <section>
+    <h2 data-aos="fade-right">Get in Touch</h2>
+    <div class="contact-container">
+      <div class="contact-info" data-aos="fade-up">
+        <h3>Contact Information</h3>
+        <p>Email: midexstudio1@gmail.com</p>
+        <p>Phone: +234 902 421 7687</p>
+        <p>Instagram: Midex Studio</p>
+        <p>Address: Lagos, Nigeria</p>
+      </div>
+      <form data-aos="fade-left">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Working Hours -->
+  <section class="working-hours" data-aos="zoom-in">
+    <h2>Working Hours</h2>
+    <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+    <p>Sat: 10:00 AM - 4:00 PM</p>
+    <p>Sun: Closed</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" data-aos="fade-up">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What services do you offer?</h3>
+      <p>We specialize in 3D animation, product visualization, simulations, and CGI for commercials.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How long does a project take?</h3>
+      <p>Depending on complexity, most projects are completed within 1-3 weeks.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you work internationally?</h3>
+      <p>Yes! We serve clients worldwide with online collaboration tools.</p>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="map" data-aos="fade-in">
+    <h2>Find Us</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126907.65419325077!2d3.2732672296128474!3d6.524379296764727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b1596c83bfb%3A0x4dcb0c6b19e9c07b!2sLagos!5e0!3m2!1sen!2sng!4v1616582923214!5m2!1sen!2sng" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" data-aos="zoom-in-up">
+    <h2>Let’s Start Your Project Today</h2>
+    <p>Partner with us to bring your ideas to life with cutting-edge 3D visuals.</p>
+    <button>Get Started</button>
+  </section>
+
+   <!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/2349024217687" target="_blank" class="whatsapp-float">💬</a>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // FAQ Toggle
+    const faqs = document.querySelectorAll(".faq-item");
+    faqs.forEach(item => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+  <footer class="footer">
+  <div class="footer-inner">
+
+    <div class="footer-col">
+      <h4>Midex Studio</h4>
+      <p>Where imagination meets realism — creating high-end 3D animation, visual effects, and product CGI that elevate brands.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">3D Product Animation</a></li>
+        <li><a href="#">Fluid & Water Simulation</a></li>
+        <li><a href="#">VFX & CGI Compositing</a></li>
+        <li><a href="#">Jewelry CGI Rendering</a></li>
+        <li><a href="#">Commercial Ad Animation</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul class="social-links">
+        <li><a href="https://www.instagram.com/midexstudio?igsh=eDg2bXh3YnFlajdz" target="_blank">Instagram</a></li>
+        <li><a href="https://www.fiverr.com/YOUR_FIVERR" target="_blank">Fiverr Profile</a></li>
+        <li><a href="https://wa.me/+2349024217687" target="_blank">WhatsApp</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Midex Studio — Crafted with Precision and Passion.</p>
+  </div>
+</footer>
+
+<style>
+.footer {
+  background: #0b0b14;
+  padding: 60px 20px 30px;
+  color: #a8b0bd;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-family: 'Poppins', sans-serif;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+.footer-col h4 {
+  color: #ffd700;
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+}
+.footer-col p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+.footer-col ul li a {
+  color: #a8b0bd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #00fff5;
+}
+.footer .social-links a {
+  display: inline-block;
+  background: rgba(255,255,255,0.05);
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin-right: 8px;
+  color: #fff;
+  font-weight: 500;
+}
+.footer .social-links a:hover {
+  background: linear-gradient(90deg,#00fff5,#00b3ff);
+  color: #000;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 18px;
+  font-size: 0.9rem;
+  color: #888;
+}
+</style>
+
+</body>
+</html>
